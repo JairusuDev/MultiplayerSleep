@@ -3,11 +3,12 @@ version: '${project.version}'
 main: dev.jairusu.multiplayersleep.MultiplayerSleep
 api-version: '1.20'
 authors: [JairusuDev]
+description: A simple Minecraft multiplayer sleeping plugin.
 website: https://github.com/JairusuDev
 
 commands:
   multiplayersleep:
-    description: 'Main command in this plugin'
+    description: Main command in this plugin
     permission: op
     aliases:
       - mps

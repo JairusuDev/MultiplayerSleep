@@ -1,7 +1,6 @@
 package dev.jairusu.multiplayersleep.Events;
 
 import dev.jairusu.multiplayersleep.Methods.Configuration;
-import dev.jairusu.multiplayersleep.Methods.WorldGroups;
 import io.papermc.paper.event.player.PlayerDeepSleepEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.GameRule;
@@ -60,7 +59,7 @@ public class SleepEvent implements Listener {
    }
 
    private void sendPlayerSleepMessage(World world) {
-      List<String> worldGroups = WorldGroups.worldGroups(world);
+      List<String> worldGroups = Configuration.worldGroups(world);
       String sleepMessage = Configuration.getString("message.playerSleepMessage");
       if (sleepMessage == null || sleepMessage.isEmpty()) return;
       for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
@@ -70,7 +69,7 @@ public class SleepEvent implements Listener {
    }
 
    private void sendOnePlayerSleepMessage(Player player) {
-      List<String> worldGroups = WorldGroups.worldGroups(player.getWorld());
+      List<String> worldGroups = Configuration.worldGroups(player.getWorld());
       String sleepMessage = Configuration.getString("message.onePlayerSleepMessage");
       if (sleepMessage == null || sleepMessage.isEmpty()) return;
       sleepMessage = sleepMessage.replace("%player%",player.getName());
