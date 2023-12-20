@@ -1,0 +1,9 @@
+message:
+  onePlayerSleepMessage: "<yellow>%player% <gold>went to sleep. Sweet dreams!"
+  playerSleepMessage: "<gold>Required players are now sleeping. Sweet dreams!"
+
+worldGroups:
+  survival:
+    - world
+    - world_nether
+    - world_the_end
